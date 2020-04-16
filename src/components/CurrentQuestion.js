@@ -22,7 +22,7 @@ export const CurrentQuestion = () => {
         answerIndex: answer
       })
     );
-    // Changed setAnswer('') to setAnswer(). This fixed all options to be black, somehow '' is equal to 0 and made the first option blue.
+    
     setAnswer();
     dispatch(quiz.actions.goToNextQuestion());
   };
@@ -76,7 +76,7 @@ export const CurrentQuestion = () => {
 
       {/* Added this section to display current question / total questions  */}
       <section className="progressbar">
-        {myQuestion} / {allQuestions}
+        {myQuestion+1} / {allQuestions}
       </section>
     </form>
   );
